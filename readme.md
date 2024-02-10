@@ -639,12 +639,66 @@ The 4 pillars of OOPs are:
 
 **4. Polymorphism:**
 
-  1. Ability of objects to take on multiple forms, allowing methods to behave differently based on the object's type or class hierarchy.
+1. Ability of objects to take on multiple forms, allowing methods to behave differently based on the object's type or class hierarchy.
 
-  2. Polymorphism Implementation (Reusablity of React Components):
-  
+2. Polymorphism Implementation (Reusablity of React Components):
 
 Polymorphism can be achieved using:
 
 1. Method Overloading (aka Compile-time or Static Polymorphism):
 2. Method Overriding (aka Run-time or Dynamic Polymorphism):
+
+---
+
+## Episode: 12 Lets Build our store?
+
+### What is Redux?
+
+Redux is an open-source Javascript library, which is used for state management in an a.
+
+Redux stores the entire state of the application in a single immutable object called the "store" or "Redux-store" and state changes are managed through actions and reducers.
+
+**Actions** describe what happened, and **reducers** specify how the state should change in response to those actions. This unidirectional flow of data makes it easier to understand and manage the application's state.
+
+### Redux Libraries and their usecase?
+
+1. React-Redux:
+   Bridges the gap between React and Redux, enabling seamless integration between the two.
+   It allows React components to interact with the Redux store, subscribing to changes in the state and dispatching actions.
+
+2. Redux-Toolkit:
+   Redux Toolkit streamlines the process of working with Redux by reducing boilerplate code
+
+### Redux Store?
+
+1. It's a large object of all the state of our application. And It's kept in a centeral global centeral place
+2. Any React component can directly access it.
+3. When we store huge amount of data in redux-store, and it becomes clumsy then we have **slices** in our code.
+
+### What is a slice?
+
+1. **Slice/s** : Its a small portion of react-store.
+2. We make different slices in a react-store for different type of data: like 'User profile Information' will have a 'User slice', 'cart information' will have a 'cart slice'.
+3. We can't modify a slice directly.
+   Lets say we want to create a **'Add to cart'** feature, and we want to update the items in the cart.
+
+   The **WRITE** process:
+
+   1. When you **click on the 'Add Button'**, it **'Dispatches'** an **'Action'**
+   2. This **Action call a funtions** and **this function(aka Reducer) will actually modifies the cart slice**.
+
+   The **READ** process:
+
+   1. We use **Selector** to make the component subscribed to a slice in the store.
+   2. When the data in the slice update, the respective component gets rerendered.
+   3. **Selector** makes the **component in sync with the store**
+
+### Steps to Build our Store?
+
+1. Install React-Redux and Redux-Toolkit: `npm install @reduxjs/toolkit` && `npm install react-redux`
+2. Build our own store.
+3. **Bridging**: Connect our store to our app.
+4. Connect our store to our app
+5. Create a Slice(cartSlice)
+6. Dispatch(action)
+7. Read the data using **Selector**
