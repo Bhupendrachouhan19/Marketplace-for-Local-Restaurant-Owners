@@ -654,14 +654,14 @@ Polymorphism can be achieved using:
 
 ### What is Redux?
 
-1) Redux is an open-source Javascript library, which is used for state management in an a.
+1. Redux is an open-source Javascript library, which is used for state management in an a.
 
-2) Redux stores the entire state of the application in a single immutable object called the "store" or "Redux-store" and state changes are managed through actions and reducers.
+2. Redux stores the entire state of the application in a single immutable object called the "store" or "Redux-store" and state changes are managed through actions and reducers.
 
-3) **Actions** describe what happened, and **reducers** specify how the state should change in response to those actions. This unidirectional flow of data makes it easier to understand and manage the application's state.
+3. **Actions** describe what happened, and **reducers** specify how the state should change in response to those actions. This unidirectional flow of data makes it easier to understand and manage the application's state.
 
-4) React (works on UI Layer), while
-5) Redux (works on Data Layer)
+4. React (works on UI Layer), while
+5. Redux (works on Data Layer)
 
 ### Redux Libraries and their usecase?
 
@@ -703,8 +703,9 @@ Polymorphism can be achieved using:
 3. **Bridging**: Connect our store to our app, using <Provider> wrapper from 'react-redux'.
 4. Create a Slice(cartSlice)
 5. Add Slice to the store
-6. Dispatch(action)
-7. Read the data using **Selector**
+6. Read the data using **Selector** (via **useSelector** Hook)
+7. Dispatch an **Action**
 
 ### What is a Reducer Function?
+
 In Redux, a reducer is a named function responsible for specifying how the application's state changes in response to dispatched actions. The reducer function takes the current state and an action as arguments and returns the new state.

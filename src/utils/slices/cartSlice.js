@@ -4,7 +4,7 @@ const cartSlice = createSlice({
   name: "cart", // giving name to the slice
   initialState: {
     // setting inital state for items going to be stored in the slice
-    items: [],
+    items: ["Burger", "Pizza", "Poha", "Samosa"],
   },
   reducers: {
     // adding the type of actions/functions we want in our cart, like: 'add an item', 'remove an item', 'clear cart', etc. Actions are kind of small API use to communicate with the redux store. So if we want to 'Add an item' we will dispatch the 'addItem'.
