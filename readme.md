@@ -704,7 +704,7 @@ Polymorphism can be achieved using:
 4. Create a Slice(cartSlice)
 5. Add Slice to the store
 6. Read the data using **Selector** (via **useSelector** Hook)
-7. Dispatch an **Action**
+7. Dispatch an **Action** (via **useDispatch** Hook)
 
 ### What is a Reducer Function?
 

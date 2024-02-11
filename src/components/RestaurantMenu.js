@@ -9,7 +9,7 @@ import { addItem } from "../utils/slices/cartSlice";
 const RestaurantMenu = () => {
   const [resInfo, _setResInfo] = useState(null);
   const dispatch = useDispatch();
-  
+
   useEffect(() => {
     fetchMenu();
   }, []);
@@ -36,11 +36,11 @@ const RestaurantMenu = () => {
   const { itemCards } =
     resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
 
-  console.log(itemCards);
+  // console.log(itemCards);
 
-  const handleAddItem = () => {
+  const handleAddItem = (itemInCart) => {
     // Dispatch an Action:
-    dispatch(addItem("DAM"));
+    dispatch(addItem(itemInCart));
   };
 
   return (
@@ -73,7 +73,9 @@ const RestaurantMenu = () => {
                   Rs
                 </td>
                 <td>
-                  <button onClick={handleAddItem}>+ Add</button>
+                  <button onClick={() => handleAddItem(item)}>
+                    + Add
+                  </button>
                 </td>
               </tr>
             ))}
