@@ -3,9 +3,13 @@ import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
 import { RESTAURANT_MENU_FETCH_API_LINK } from "../utils/constants";
 
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/slices/cartSlice";
+
 const RestaurantMenu = () => {
   const [resInfo, _setResInfo] = useState(null);
-
+  const dispatch = useDispatch();
+  
   useEffect(() => {
     fetchMenu();
   }, []);
@@ -34,6 +38,11 @@ const RestaurantMenu = () => {
 
   console.log(itemCards);
 
+  const handleAddItem = () => {
+    // Dispatch an Action:
+    dispatch(addItem("DAM"));
+  };
+
   return (
     <div className="res-menu-container">
       <h1>
@@ -50,6 +59,7 @@ const RestaurantMenu = () => {
               <th>ID</th>
               <th>Name</th>
               <th>Price</th>
+              <th>Click to Add</th>
             </tr>
           </thead>
           <tbody>
@@ -62,7 +72,9 @@ const RestaurantMenu = () => {
                     100}{" "}
                   Rs
                 </td>
-                <button onClick={() => {/* Dispatch an Action */}}>+ Add</button>
+                <td>
+                  <button onClick={handleAddItem}>+ Add</button>
+                </td>
               </tr>
             ))}
           </tbody>
