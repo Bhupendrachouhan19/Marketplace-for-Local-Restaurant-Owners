@@ -701,7 +701,10 @@ Polymorphism can be achieved using:
 1. Install React-Redux and Redux-Toolkit: `npm install @reduxjs/toolkit` && `npm install react-redux`
 2. Build our own store.
 3. **Bridging**: Connect our store to our app, using <Provider> wrapper from 'react-redux'.
-4. Connect our store to our app
-5. Create a Slice(cartSlice)
+4. Create a Slice(cartSlice)
+5. Add Slice to the store
 6. Dispatch(action)
 7. Read the data using **Selector**
+
+### What is a Reducer Function?
+In Redux, a reducer is a named function responsible for specifying how the application's state changes in response to dispatched actions. The reducer function takes the current state and an action as arguments and returns the new state.
