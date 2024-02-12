@@ -5,11 +5,11 @@ import MenuItemList from "./MenuItemList";
 import {clearCart} from "../utils/slices/cartSlice";
 
 const Cart = () => {
-  const dispatch = useDispatch()
   const cartItems = useSelector((store) => store.cart.items);
   // console.log("Comming from Cart Component", cartItems);
-
-
+  
+  
+  const dispatch = useDispatch()
   const handleClearCart = () => {
     dispatch(clearCart())
   }

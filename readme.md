@@ -709,3 +709,29 @@ Polymorphism can be achieved using:
 ### What is a Reducer Function?
 
 In Redux, a reducer is a named function responsible for specifying how the application's state changes in response to dispatched actions. The reducer function takes the current state and an action as arguments and returns the new state.
+
+### Things to remember while using useSelector()?
+
+1. useSelector() is used to read the 'state of a selected slice' or 'the whole store' on that point of time.
+
+2. useSelector is used to subscribe a portion(aka slice) of a store.
+
+3. The component using useSelector() will re-render whenever the selected data changes.
+
+4. Performance Tips:
+
+```
+  <!-- BETTER/Efficient Approach is selecting the specific slice with which we want to sync our UI, because here the UI will rerender only if the state of selected slice changes  -->
+
+  const cartItems = useSelector((store) => store.cart.items);
+
+```
+
+```
+   <!-- BAD Approach because here the UI will rerender even if state of slice other than that we want to target changes-->
+
+   const wholeStore = useSelector((store) => store);
+   const cartItems = wholeStore.cart.items;
+```
+
+
