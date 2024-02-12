@@ -1,148 +1,212 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
 * {
-    box-sizing: border-box;
-    outline: none;
-    /* border: none; */
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  outline: none;
+  /* border: none; */
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    /* border-bottom: solid 2px rgb(171, 93, 93); */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  /* border-bottom: solid 2px rgb(171, 93, 93); */
 }
 
 .header .logo {
-    width: 5rem;
+  width: 5rem;
 }
 
 .nav-items > ul {
-    list-style-type: none;
-    display: flex;
+  list-style-type: none;
+  display: flex;
 }
 
 .nav-items > ul > li {
-    /* border: solid 2px rgb(29, 199, 57); */
-    padding: 0 3rem;
-    font-size: 2rem;
-    cursor: pointer;
+  /* border: solid 2px rgb(29, 199, 57); */
+  padding: 0 3rem;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 .log-button {
-    padding: 0 3rem;
-    font-size: 1.5rem;
-    width: 11rem;
-    cursor: pointer;
+  padding: 0 3rem;
+  font-size: 1.5rem;
+  width: 11rem;
+  cursor: pointer;
 }
 
 .body {
-    /* border: solid 2px rgb(29, 199, 57); */
+  /* border: solid 2px rgb(29, 199, 57); */
 }
 
 .search {
-    padding: 10px;
-    /* border: solid 2px rgb(29, 199, 57); */
-    display: flex;
-    width: max-content;
-    justify-content: space-between;
+  padding: 10px;
+  /* border: solid 2px rgb(29, 199, 57); */
+  display: flex;
+  width: max-content;
+  justify-content: space-between;
 }
 
 .search-element {
-    margin: 0 0.5rem;
-    padding: 0 0.5rem;
+  margin: 0 0.5rem;
+  padding: 0 0.5rem;
 }
 
 .filter {
-    width: max-content;
-    margin: 10px 0 0 30px;
-    /* border: solid red 2px; */
-    display: flex;
-    padding: 5px;
-    margin: 0 auto;
+  width: max-content;
+  margin: 10px 0 0 30px;
+  /* border: solid red 2px; */
+  display: flex;
+  padding: 5px;
+  margin: 0 auto;
 }
 
 .filter * {
-    border-radius: 10px;
+  border-radius: 10px;
 }
 .filter > .filter-btn {
-    cursor: pointer;
-    padding: 0.5rem;
-    margin: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin: 0.5rem;
 }
 
-.res-container, .shimmer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    /* border: solid 2px brown;  */
+.res-container,
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* border: solid 2px brown;  */
 }
 
-.res-card, .shimmer-cards {
-    width: 250px;
-    padding: 5px;
-    margin: 10px;
-    border-radius: 15px;
-    min-width: 5rem;
-    min-height: 25rem;
-    border: solid 2px rgb(175, 175, 175);
-    background-color: rgb(245, 243, 243);
-    text-decoration: none;
-    color: black;
+.res-card,
+.shimmer-cards {
+  width: 250px;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 15px;
+  min-width: 5rem;
+  min-height: 25rem;
+  border: solid 2px rgb(175, 175, 175);
+  background-color: rgb(245, 243, 243);
+  text-decoration: none;
+  color: black;
 }
 
 .res-card:hover {
-    background: orange;
-    cursor: pointer;
+  background: orange;
+  cursor: pointer;
 }
 
 .res-card > .foodlogo-container > .foodlogo {
-    width: 100%;
-    border-radius: 15px;
+  width: 100%;
+  border-radius: 15px;
 }
 
 .foodlogo-container {
-    display: flex;
-    border-radius: 15px;
-    overflow: hidden;
+  display: flex;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .foodlogo-container > .zoom-in-foodlogo {
-    transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .foodlogo-container > .zoom-in-foodlogo:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .shimmer-text {
-    color: grey;
-    text-align: center;
+  color: grey;
+  text-align: center;
 }
 
 .about-container {
-    text-align: center;
-    background-color: rgb(237, 161, 47);
-    padding-bottom: 0.4rem;
-    border-radius: 13px;
+  text-align: center;
+  background-color: rgb(237, 161, 47);
+  padding-bottom: 0.4rem;
+  border-radius: 13px;
 }
 
 /* User Component : Start */
 .user-container {
-    /* border: 3px solid orange; */
-    background-color: blanchedalmond;
-    border-radius: 10px;
-    padding: 0.5rem 1rem;
-    margin: 1rem;
-    text-align: justify;
+  /* border: 3px solid orange; */
+  background-color: blanchedalmond;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  text-align: justify;
 }
 
 .user {
-    text-align: center;
+  text-align: center;
 }
 
 /* User Component : End */
+
+/* MenuItemList Component : Start */
+
+.menu-item-list-container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-item-list-table {
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+.menu-item-list-table .menu-item-list-table-thead {
+    background-color: orange;
+    font-size: 2rem;
+}
+
+.menu-item-list-table-thead tr th {
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.menu-item-list-table .dish-info {
+  /* width: 6rem; */
+}
+
+.menu-item-list-table .dish-info {
+  /* width: 6rem; */
+}
+
+.menu-item-list-table-tbody {
+  align-items: center;
+  border-radius: 15px;
+}
+
+.menu-item-dish-row .menu-item-image-td {
+  display: flex;
+  padding: 1rem;
+}
+
+.menu-item-dish-row .menu-item-image {
+  border-radius: 15px;
+  padding: 0 auto;
+}
+
+.menu-item-dish-row .menu-item-info, .menu-item-price {
+  background-color: rgb(255, 208, 53);
+  border-radius: 15px;
+  font-size: large;
+}
+
+.menu-item-list-table .add-to-cart-btn {
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: chartreuse;
+}
+
+/* MenuItemList Component : End */

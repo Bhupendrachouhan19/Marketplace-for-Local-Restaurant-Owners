@@ -11,7 +11,7 @@ const Header = () => {
 
   // Subscribing to the store:
   const cartItems = useSelector((store1) => store1.cart.items);
-  console.log(cartItems);
+  // console.log(cartItems);
 
   return (
     <div className="header">
