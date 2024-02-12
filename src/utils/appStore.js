@@ -5,8 +5,8 @@ import cartReducer from "./slices/cartSlice";
 const appStore = configureStore({
   // Below adding 'Different Reducers of Slices' to 'Reducer of the Store'
   reducer: {
-    cart: cartReducer,
+    cart: cartReducer, // connecting the 'cartSlice' to the main 'Store'.
   },
 });
 
-export default appStore;
+export default appStore;          

@@ -10,8 +10,8 @@ const Header = () => {
   console.log("Header Rendered");
 
   // Subscribing to the store:
-  const cartItems = useSelector((store) => store.cart.items); 
-  console.log(cartItems)
+  const cartItems = useSelector((store1) => store1.cart.items);
+  console.log(cartItems);
 
   return (
     <div className="header">
