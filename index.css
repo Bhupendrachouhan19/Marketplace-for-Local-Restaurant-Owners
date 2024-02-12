@@ -29,7 +29,7 @@
 .nav-items > ul > li {
   /* border: solid 2px rgb(29, 199, 57); */
   padding: 0 3rem;
-  font-size: 2rem;
+  font-size: 1.7rem;
   cursor: pointer;
 }
 
@@ -135,7 +135,6 @@
 
 /* User Component : Start */
 .user-container {
-  /* border: 3px solid orange; */
   background-color: blanchedalmond;
   border-radius: 10px;
   padding: 0.5rem 1rem;
@@ -158,26 +157,23 @@
 }
 
 .menu-item-list-table {
-    border-collapse: separate;
-    border-spacing: 10px;
+  border-collapse: separate;
+  border-spacing: 10px;
+  width: 80vw;
 }
 
 .menu-item-list-table .menu-item-list-table-thead {
-    background-color: orange;
-    font-size: 2rem;
+  background-color: orange;
+  font-size: 2rem;
 }
 
 .menu-item-list-table-thead tr th {
-    padding: 15px;
-    border-radius: 15px;
+  padding: 15px;
+  border-radius: 15px;
 }
 
-.menu-item-list-table .dish-info {
-  /* width: 6rem; */
-}
-
-.menu-item-list-table .dish-info {
-  /* width: 6rem; */
+.menu-item-list-table .menu-item-info {
+  padding: 1rem;
 }
 
 .menu-item-list-table-tbody {
@@ -185,28 +181,54 @@
   border-radius: 15px;
 }
 
-.menu-item-dish-row .menu-item-image-td {
-  display: flex;
-  padding: 1rem;
-}
-
-.menu-item-dish-row .menu-item-image {
+.menu-item-dish-row .menu-item-image,
+.menu-item-add {
   border-radius: 15px;
   padding: 0 auto;
 }
 
-.menu-item-dish-row .menu-item-info, .menu-item-price {
+.menu-item-dish-row .menu-item-info,
+.menu-item-price {
   background-color: rgb(255, 208, 53);
   border-radius: 15px;
   font-size: large;
 }
 
+.menu-item-price {
+  font-weight: bold;
+}
+
 .menu-item-list-table .add-to-cart-btn {
-    padding: 10px;
-    border-radius: 15px;
-    font-size: 1rem;
-    font-weight: bold;
-    background-color: chartreuse;
+  padding: 10px;
+  border-radius: 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: chartreuse;
 }
 
 /* MenuItemList Component : End */
+
+/* Cart Component : Start */
+
+.cart-container {
+  text-align: center;
+}
+
+.cart-container .cart-clear-btn {
+  margin: 0.5rem;
+  padding: 10px;
+  border-radius: 15px;
+  font-size: large;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: white;
+  background-color: rgb(139, 139, 139);
+}
+
+.empty-cart-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: red;
+}
+
+/* Cart Component : End */

@@ -44,7 +44,7 @@ const MenuItemList = ({ items }) => {
                   100}{" "}
                 Rs
               </td>
-              <td>
+              <td className="menu-item-add">
                 <button
                   onClick={() => handleAddItem(item)}
                   className="add-to-cart-btn"
