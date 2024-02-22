@@ -396,7 +396,7 @@ Seperation of concerns a principle used in programming to separate an applicatio
 ### Two ways to fetch data from an API ?
 
 Way-1: Less used (Not so good UX)
-[App loads] ---> [API Call(lets say it took 500ms to lead)] ---> [Render data on the UI]
+[App loads] ---> [API Call(let's say it took 500ms to lead)] ---> [Render data on the UI]
 
 Way-2: **Most used method in ReactJS (Better UX)**
 [App loads] ---> [Render base UI Skeleton] ---> [API Call] --> [Render the data on the UI]
@@ -650,7 +650,7 @@ Polymorphism can be achieved using:
 
 ---
 
-## Episode: 12 Lets Build our store?
+## Episode: 12 Let's Build our store?
 
 ### What is Redux?
 
@@ -683,7 +683,7 @@ Polymorphism can be achieved using:
 1. **Slice/s** : Its a small portion of react-store.
 2. We make different slices in a react-store for different type of data: like 'User profile Information' will have a 'User slice', 'cart information' will have a 'cart slice'.
 3. We can't modify a slice directly.
-   Lets say we want to create a **'Add to cart'** feature, and we want to update the items in the cart.
+   Let's say we want to create a **'Add to cart'** feature, and we want to update the items in the cart.
 
    The **WRITE** process:
 
@@ -734,4 +734,36 @@ In Redux, a reducer is a named function responsible for specifying how the appli
    const cartItems = wholeStore.cart.items;
 ```
 
+### Q) Imagine you are working on a large-scale React application, and you encounter performance issues due to excessive re-rendering. How would you approach identifying and resolving this problem? Share your thought process and potential solutions.
 
+Ans)
+Steps I’ll follow:
+
+#### 1) Observation Phase:
+
+• Firstly, I will examine the component hierarchy and identify the component causing unwanted re-renders.
+
+#### 2) Finding Reason Phase:
+
+• Now will try to find the specific reason behind the excessive re-rendering component.
+• NOTE: Every time either the state or props of a component are updated, that component gets re-rendered. Some of the situations leading to unwanted re-rendering are mentioned below:
+a. Prop Drilling: This process can cause excessive re-rendering problem when a React app doesn't use a state management library like Redux.
+b. Over Subscription: If a component subscribes to excessive amount of data from a redux store, then this can result in unnecessary re-renders.
+
+#### 3) Solution Phase:
+
+a. Using state management libraries like Redux to manage centralized state in a predictable and centralized manner helps avoid prop drilling.
+b. Ensuring that components are subscribed only to the state and data that they specifically need from the store.
+
+#### 4) Optimization Phase
+
+a. Using Pure Components with immutable data can boost the performance, as it only gets re-rendered when it finds any type of difference after an automatic shallow comparison of state and props.
+b. Using frameworks like NextJS which unlike ReactJS offers SSR(Server Side Rendering) where initial rendering occurs on the server, can boost performance and is also beneficial for SEO.
+
+### How Redux uses Immer library behind the scenes?
+
+1. Redux states are immutable.
+2. Redux uses the Immer library behind the scenes to simplify the process of updating immutable state. Immer allows Redux reducers to write code that looks like mutable state updates, but actually produces immutable updates under the hood. This makes it easier to work with immutable data structures in Redux without having to write boilerplate code for deep copying and updating objects.
+
+### RTK Query v/s "Redux Thunk with Middleware"?
+RTK Query provides a more streamlined and opinionated approach for handling data fetching and caching specifically, while Redux Thunk with middleware offers more flexibility for customizing asynchronous logic across different parts of your Redux application. RTK Query is often preferred for simpler data fetching scenarios, while Redux Thunk is useful for more complex asynchronous workflows.

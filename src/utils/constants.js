@@ -5,7 +5,7 @@ const MENU_ITEM_THUMBNAIL_LINK_HEADER =
   "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/";
 
 const COMPANY_LOGO =
-  "https://png2.cleanpng.com/sh/8096da9c72a8a6add7e8841dfa332c42/L0KzQYm3WcE6N6l4kZH0aYP2gLBuTgNmeqdue9c2YoLkfrW0gB9ueJJzkZ9sbHnzPbL5lL1nd5DpRdV4boTkc8W0lgMueJpzgAc2Z4XzhLK0gB9wc15mhtY2Y3H3dcP6TcVjaWQ2SNcANXGzQoGBTsk4OGg7SKI8MUW2R4W4U8M1QWQ7UKk3cH7q/kisspng-service-brand-company-clip-art-food-contact-us-pinku-gupta-cook-and-caters-5ba310e55a0208.9707600315374133493687.png";
+  "https://png2.cleanpng.com/sh/86e650c8a51d4c6afd0427078c01f7d4/L0KzQoW3UcIyN6NuhJH9cnHxg8HokvVvfF58eeZucj3ngrF3k71jeppsgOY2cHnxe37AggRmepR0hNH7LXHzgL3sTgdqfJkyj9N9ZYKwdMP2kPxmfKQ7TdNtZHHldbLqhfY4PV84UKcDOUi4QoKAUMU5QWM6TKQCMEi3PsH1h5==/transparent-water-drops-bright-pink-watercolor-apple-with-water-droplets65addabeacef75.3858985217058925427084.png";
 
 const RESTAURANT_FETCH_API_LINK =
   "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.5355161&lng=77.3910265&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";

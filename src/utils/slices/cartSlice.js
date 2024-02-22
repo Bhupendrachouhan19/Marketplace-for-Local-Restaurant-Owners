@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, current } from "@reduxjs/toolkit";
 
 const cartSlice = createSlice({
   name: "cart", // giving name to the slice
@@ -16,7 +16,15 @@ const cartSlice = createSlice({
       initialState.items.pop();
     },
     clearCart: (initialState) => {
-      initialState.items.length = 0; // setting length to 0 of a javascript Array makes it Empty: []
+      console.log(current(initialState)); // checking the Current State
+
+      // In RTK we can either (MUTATE State):
+      // initialState.items.length = 0; // (MUTATING)setting length to 0 of a javascript Array makes it Empty: []
+      
+      // OR (CREATE NEW State):
+      return { items: [] }; // this new object will replace the previously declared 'items' state/property inside the initialState object.
+      
+      console.log(current(initialState)); // checking the Current State
     },
   },
 });
